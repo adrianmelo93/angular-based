@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quiz1</title>
+</head>
+<body ng-app="MyApp" ng-controller="MyCtrl">
+
+<label>name:
+  <input   type="text" ng-model="name"></input><br>
+
+<label>Phone: <input type="text"ng-model="phone"></label><br>
+
+<button type="button" ng-click = "doneClick()">Submit</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+<script>
+var app = angular.module('MyApp', []);
+app.controller('MyCtrl', ['$scope', function($scope){
+$scope.name = "";
+$scope.phone = "";
+
+$scope.doneClick = function(){
+console.log($scope.name);
+console.log($scope.phone);
+}
+}]);
+</script>
+</body>
+</html>
