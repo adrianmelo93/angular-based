@@ -1,0 +1,81 @@
+1-An angular directive is:
+
+a-The same thing as a Controller
+
+b-A way to define a custom element or attribute.
+
+c-A way to use ng-app
+
+d-A way for angular to communicate with a specific API
+
+       answer: b-A way to define a custom element or attribute.
+
+
+2-Write the JavaScript code necessary to create a controller named "PageController" which prints the string "hello world" as soon as the page loads and the controller runs.
+
+	angular.module('hola', [])
+Answer:  .controller("PageController",['$scope', function($scope){
+				$scope.saludo="hello world"}]);
+
+
+3-Given the following angular module declaration:
+
+var app = angular.module("CookiesApp", ['ngRoute', 'ngAnimate']);
+
+
+a-How do you bind this angular module to a particular portion of your html page (for instance the body tag)?
+
+	answer:<body ng-app="CookiesApp" ng-controller="the-name">
+
+
+4-Write a recursive function which receives an array and returns the sum of the elements of the array.
+
+	answer:	function recArr(arr){
+		return arr[0] + recArr(arr.slice(1));
+			}
+
+
+5-Given two temperatures, return true if one is less than 0 and the other is greater than 100.
+a.icyHot(120, -1) → true      function icyHot(a, b){
+c.icyHot(2, 120) → false					  if(a < 0 && b > 100 || a > 100 && b < 0){
+b.icyHot(-1, 120) → true               return true;
+                                      }else{return false;
+                                      }
+                                      }
+
+
+
+
+
+
+6-Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
+a.makes10(9, 10) → true            function makes10(a, b){
+b.makes10(9, 9) → false               if(a === 10 || b === 10 || (a + b) === 10){
+c.makes10(1, 9) → true             return true;
+				                            }else{
+					                            return false;
+				                                  }
+				                                      }
+
+
+
+
+7-Given a string, take the first 2 chars and return the string with the 2 chars added at both the front and back, so "kitten" yields"kikittenki". If the string length is less than 2, use whatever chars are there.
+a.front22("kitten") → "kikittenki"            function front22(string){
+b.front22("Ha") → "HaHaHa"                       if(string.length < 2){
+c.front22("abc") → "ababcab"			                 return string.substring(0, 2)+ string + string.substring(0, 2);
+                                                }else{
+						                                       return string + string + string;
+                                                 }
+                                               }
+
+
+
+
+
+
+8-Write an angular-based web form with two text inputs and one button. Label your inputs "name" and "phone." When clicked, the button should log the contents of the text input to the console.
+
+9-(Optional) Solve https://codility.com/programmers/lessons/3-time_complexity/frog_jmp/ Submit the screenshot of your solution after being put through the codility grader.
+
+10-(Optional) Solve https://codility.com/programmers/lessons/3-time_complexity/perm_missing_elem/ Submit a screenshot of your solution after being put through the codility grader.
